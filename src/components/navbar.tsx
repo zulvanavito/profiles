@@ -1,15 +1,15 @@
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Dock, DockIcon } from '@/components/magicui/dock';
+import { ModeToggle } from '@/components/mode-toggle';
+import { buttonVariants } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
+} from '@/components/ui/tooltip';
+import { DATA } from '@/data/resume';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -22,15 +22,16 @@ export default function Navbar() {
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
+                  target='_blank'
                   className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
+                    buttonVariants({ variant: 'ghost', size: 'icon' }),
+                    'size-12'
                   )}
                 >
                   <item.icon className="size-4" />
                 </Link>
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent className="mb-2">
                 <p>{item.label}</p>
               </TooltipContent>
             </Tooltip>
@@ -45,16 +46,17 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   <Link
                     href={social.url}
+                    target='_blank'
                     className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
+                      buttonVariants({ variant: 'ghost', size: 'icon' }),
+                      'size-12'
                     )}
                   >
                     <social.icon className="size-4" />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
+                <TooltipContent className="mb-2">
+                  <p>{social.name}</p>
                 </TooltipContent>
               </Tooltip>
             </DockIcon>
