@@ -50,21 +50,21 @@ export const DATA = {
       },
       LinkedIn: {
         name: 'LinkedIn',
-        url: 'https://dub.sh/dillion-linkedin',
+        url: 'https://www.linkedin.com/in/zulvanavito/',
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: 'X',
-        url: 'https://dub.sh/dillion-twitter',
+        url: 'https://x.com/zulvan_avito',
         icon: Icons.x,
 
         navbar: true,
       },
       Youtube: {
         name: 'Youtube',
-        url: 'https://dub.sh/dillion-youtube',
+        url: 'https://www.youtube.com/@zaaavito',
         icon: Icons.youtube,
         navbar: true,
       },
